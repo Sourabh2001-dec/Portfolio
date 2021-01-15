@@ -1,0 +1,44 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    border: 1px solid $color-grey-light-1;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    text-decoration: none;
+  }
+
+  &--white {
+    &:hover {
+      background-color: $color-white;
+      color: $color-grey-dark-3;
+      border: 1px solid $color-grey-dark;
+      transform: translateY(-0.3rem);
+    }
+
+    &:active,
+    &:focus {
+      outline: none;
+      transform: translateY(-0.1rem);
+    }
+  }
+
+  &--rounded {
+    border-radius: 20rem;
+  }
+
+  &-primary {
+    background-color: $color-primary;
+    color: $color-white;
+  }
+
+  &-small {
+    padding: 0.5rem 1rem;
+  }
+
+  &-large {
+    padding: 1rem 2rem;
+  }
+}

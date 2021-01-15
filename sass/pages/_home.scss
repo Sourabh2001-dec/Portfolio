@@ -1,0 +1,42 @@
+.header {
+  position: relative;
+  height: 92vh;
+  // -webkit-clip-path: polygon(0 0, 100% 0, 100% 92vh, 50% 100%, 0 92vh);
+  // clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 100%, 0 92vh);
+}
+
+.section-skills {
+  padding: 4rem 2rem;
+  background-color: $bg-color-grey;
+  min-height : 100vh;
+}
+
+.section-projects {
+  padding: 4rem 2rem;
+}
+
+.section-contact {
+  padding: 4rem 2rem;
+  color: $color-white !important;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-black, 0.6),
+      rgba($color-black, 0.6)
+    ),
+    url("../assets/section-contact.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  // transform: skewY(-1deg);
+
+  // & > *{
+  //   transform: skewY(1deg);
+  // }
+
+  .contact-divider {
+    border-right: 1px solid grey;
+
+    @include respond(tab-port){
+      border: none;
+    }
+  }
+}

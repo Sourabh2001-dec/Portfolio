@@ -1,0 +1,44 @@
+.contacts {
+  &__list {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+
+    @include respond(tab-port){
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  }
+
+  &__item {
+    color: $color-primary;
+    transition: all 0.3s;
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &:hover{
+        transform: translateY(-1.6rem);
+        color: $color-primary-dark;
+    }
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 3rem;
+    color: inherit;
+  }
+
+  &__icon {
+    padding: 2rem;
+    background-color: $color-white;
+
+    border-radius: 50%;
+    // &::before {
+    //   margin-top: 50%;
+    //   transform: translateY(-50%);
+    // }
+  }
+}

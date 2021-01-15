@@ -1,0 +1,80 @@
+.intro-box {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: $color-white;
+
+  @include respond(phone){
+    top: 40%;
+    width: 100%;
+  }
+
+  &__line {
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 15rem;  // 8
+    //font-family: "just_dreamregular";
+    //font-family: 'Bodoni Moda';
+    font-family: "billion_reach_demoregular";
+    line-height: 1.2;
+    text-shadow: 1px 1px rgba($color-primary,.6);
+
+    @include respond(phone){
+      font-size: 14rem;  // 6
+    }
+
+    @media (max-width:320px){
+      font-size: 5rem;  // 5
+    }
+  }
+
+  &__proficon {
+    display: inline-block;
+    height: 2rem;
+    width: auto;
+    margin-left: 1rem;
+  }
+
+  &__proftext {
+    display: inline-block;
+    font-weight: 300;
+    // font-family: 'Bodoni Moda';
+    // font-style: italic;
+    padding-top: 1rem;
+  }
+
+  &__icons {
+    display: inline-block;
+    margin: 3rem 0;
+  }
+
+  &__icon {
+    display: inline-block;
+    font-size: 3rem;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__sociallink {
+    color: inherit;
+    display: inline-flex;
+    padding: 1rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: $color-white;
+      color: $color-black;
+    }
+  }
+}

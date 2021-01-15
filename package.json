@@ -1,0 +1,18 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css",
+    "watch:sass" : "nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.3"
+  }
+}

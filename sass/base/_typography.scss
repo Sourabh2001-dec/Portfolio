@@ -1,0 +1,50 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: $default-font-size;
+  line-height: 1.7;
+  color: $color-grey-dark;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,600;1,400&display=swap');
+
+@font-face {
+  font-family: 'billion_reach_demoregular';
+  src: url('../assets/fonts/billion_reach_demo-webfont.woff2') format('woff2'),
+       url('../assets/fonts/billion_reach_demo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@font-face {
+  font-family: 'just_dreamregular';
+  src: url('../assets/fonts/just_dream-webfont.woff2') format('woff2'),
+       url('../assets/fonts/just_dream-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+.heading-secondary{
+  text-align: center;
+  text-transform: uppercase;
+  //color: inherit;
+  color: $color-grey-dark-3;
+  font-size: 3rem;
+  padding: 5rem 3rem 3rem 3rem;
+
+  &--white{
+    color: $color-white;
+  }
+}
+.heading-tertiary{
+  text-transform: uppercase;
+  color: $color-grey-dark-3;
+  font-size: 1.5rem;
+  padding: .8rem 0;
+
+  @include respond(tab-port){
+    font-size: 1.8rem;
+  }
+}

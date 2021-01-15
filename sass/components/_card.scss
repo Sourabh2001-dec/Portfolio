@@ -1,0 +1,59 @@
+.card {
+  padding: 2rem 4rem 3rem 4rem;
+  border-radius: 4px;
+  box-shadow: 0 .8rem 2.4rem rgba($color-black, 0.1);
+  width: 100%;
+  height: 100%;
+  transition: all .3s;
+  background-color: $color-white;
+
+  &__icon {
+    text-align: center;
+    font-size: 6rem;
+    margin-bottom: 0.5rem;
+    background-image: linear-gradient(
+      to right,
+      $color-primary-light,
+      $color-primary-dark
+    );
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    text-align: center;
+    color: $color-grey-dark-2;
+  }
+
+  &__techlist {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__item {
+    display: inline-block;
+    font-size: 3rem;
+
+    &:not(:last-child) {
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__description {
+    padding: 0 2%;
+    font-size: 1.4rem;
+    color: $color-grey-dark-3;
+    text-align: center;
+  }
+
+  &:hover{
+    transform: translateY(-1rem);
+    box-shadow: 0 1.2rem 3rem rgba($color-black, 0.15);
+  }
+}
