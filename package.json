@@ -5,14 +5,21 @@
   "main": "index.js",
   "scripts": {
     "compile:sass": "node-sass sass/main.scss css/style.css",
-    "watch:sass" : "nodemon -e scss -x \"npm run compile:sass\""
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\"",
+    "concat:css": "concat -o css/style.css css/style.css",
+    "prefix:css": "npx postcss css/style.css --use autoprefixer  -b 'last 10 versions' -o css/style.css",
+    "compress:css": "node-sass css/style.css css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass concat:css prefix:css compress:css"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "node-sass": "^4.12.0"
+    "autoprefixer": "^10.2.1",
+    "concat": "^1.0.3",
+    "node-sass": "^4.12.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.2.4",
+    "postcss-cli": "^8.3.1"
   },
-  "dependencies": {
-    "bootstrap": "^4.5.3"
-  }
+  "dependencies": {}
 }
