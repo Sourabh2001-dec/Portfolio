@@ -20,12 +20,14 @@ html {
   @include respond(tab-port) {
     font-size: 50%;
     [data-aos-delay] {
-      transition-delay: 0s !important;
+      &:not(.contacts__item) {
+        transition-delay: 0s !important;
+      }
     }
   }
 
   @include respond(phone) {
-    font-size: 49.8%;
+    font-size: 51%;
   }
 }
 

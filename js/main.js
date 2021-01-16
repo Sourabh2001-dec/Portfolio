@@ -207,11 +207,27 @@ document
   .querySelector(".navbar__toggle-icon--open")
   .addEventListener("click", (e) => {
     console.log("open");
-    document.querySelector(".navbar__navlist-wrapper").style.display = "flex";
-    document.querySelector(".navbar__navlist-wrapper").style.right = 0;
+    // document.querySelector(".navbar__navlist-wrapper").style.display = "flex";
+    const element = document.querySelector(".navbar__navlist-wrapper");
+    if (
+      element.classList.contains("navbar__navlist-wrapper--show") ||
+      element.classList.contains("navbar__navlist-wrapper--hide")
+    ) {
+      element.classList.toggle("navbar__navlist-wrapper--show");
+      element.classList.toggle("navbar__navlist-wrapper--hide");
+    } else {
+      element.classList.add("navbar__navlist-wrapper--show");
+    }
   });
-document
-  .querySelector(".navbar__toggle-icon--close")
-  .addEventListener("click", (e) => {
-    document.querySelector(".navbar__navlist-wrapper").style.right = "-70vw";
-  });
+document.querySelectorAll(".navbar__item").forEach((item) =>
+  item.addEventListener("click", (e) => {
+    const element = document.querySelector(".navbar__navlist-wrapper");
+    if (
+      element.classList.contains("navbar__navlist-wrapper--show") ||
+      element.classList.contains("navbar__navlist-wrapper--hide")
+    ) {
+      element.classList.toggle("navbar__navlist-wrapper--show");
+      element.classList.toggle("navbar__navlist-wrapper--hide");
+    }
+  })
+);
