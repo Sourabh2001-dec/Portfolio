@@ -8,7 +8,7 @@
 .section-skills {
   padding: 6rem 2rem 3rem 2rem;
   background-color: $bg-color-grey;
-  min-height : 100vh;
+  min-height: 100vh;
 }
 
 .section-projects {
@@ -27,16 +27,15 @@
     url("../assets/section-contact.jpg");
   background-size: cover;
   background-attachment: fixed;
-  // transform: skewY(-1deg);
-
-  // & > *{
-  //   transform: skewY(1deg);
-  // }
+  @include respond(phone) {
+    background-position: -60%;
+    min-height: 50vh;
+  }
 
   .contact-divider {
     border-right: 1px solid grey;
 
-    @include respond(tab-port){
+    @include respond(tab-port) {
       border: none;
     }
   }
